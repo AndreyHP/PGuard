@@ -1,3 +1,5 @@
+/*Reset*/
+
 html{
     font-size: 16px;
 }
@@ -18,14 +20,51 @@ header a{
     max-width: 1024px;
     margin: auto;
 }
+/*Reset*/
 
-
+/*Header*/
 header h1{
     background-image: url('../img/Dog-Banner.jpg');
     background-size:cover;
     background-position-y: 10%;
     color:rgb(56, 56, 56);
     padding: 3.5rem;
+    border-radius: 0px 0px 15px 15px;
+}
+/*Header*/
+
+/*Aside*/
+#aside-p{
+    width: 200px; /* Fixed width for the aside */
+    height: 200px;
+    flex: 1;
+    max-height: 600px;
+    max-width: 200px;
+    background-color: #f0f0f0; /* Light background for visibility */
+    padding: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1); /* Optional shadow */ 
+    border-radius: 0px 0px 15px 15px;
+}
+
+aside {
+    width: 200px; /* Fixed width for the aside */
+    height: 600px;
+    max-height: 600px;
+    background-color: #f0f0f0; /* Light background for visibility */
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    border-radius: 0px 0px 15px 15px;
+}
+/*Aside*/
+
+/*Main*/
+main {
+    display: flex;
+    flex: 1; /* Allow main to take the remaining space */
+    max-width: 1024px; /* Optional max width for the main content */
+    padding: 20px;
+    background-color: #fff; /* White background for main content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 #item-container{
@@ -36,3 +75,8 @@ header h1{
     max-width: 400px;
     margin: auto;
 }
+/*Main*/
+
+
+
+
