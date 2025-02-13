@@ -31,6 +31,10 @@ header h1{
     padding: 3.5rem;
     border-radius: 0px 0px 15px 15px;
 }
+
+.navbar{
+    border-radius: 0px 0px 30px 30px;
+}
 /*Header*/
 
 /*Aside*/
@@ -53,19 +57,21 @@ aside {
     background-color: #f0f0f0; /* Light background for visibility */
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
 }
 /*Aside*/
 
 /*Main*/
-main {
-    display: flex;
-    flex: 1; /* Allow main to take the remaining space */
-    max-width: 1024px; /* Optional max width for the main content */
-    padding: 20px;
-    background-color: #fff; /* White background for main content */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+main{
+    display: flex !important;
+    flex: 1 !important; /* Allow main to take the remaining space */
+    max-width: 1024px !important; /* Optional max width for the main content */
+    background-color: #fff !important; /* White background for main content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1) !important; /* Optional shadow */
+    border-radius: 50px;
 }
+
+
 
 #item-container{
     display: flex;
@@ -75,8 +81,49 @@ main {
     max-width: 400px;
     margin: auto;
 }
-/*Main*/
 
+#image-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#spacer{
+    padding-bottom: 10px;
+}
+.card{
+    border: none;
+    padding-right: 10px;
+}
+
+.card:hover{
+    border: 1px solid rgba(0,0,0,.125)
+}
+
+#recomendados{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding-top: 1rem;
+}
+/*Main*/
+/*FOOTER*/
+footer{
+    background-color: #a9c8db;
+}
+
+footer div{
+    display: flex;
+    flex-direction: row;
+    display: 1;
+    justify-content: center;
+}
+
+footer div:last-child{
+    margin-left: auto;
+}
+/*FOOTER*/
 
 
 

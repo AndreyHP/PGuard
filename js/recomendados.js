@@ -1,12 +1,14 @@
 const imageArray = [
-    './img/food.jpg',
-    './img/food.jpg',
-    './img/food.jpg'
+    '../img/food.jpg',
+    '../img/food.jpg',
+    '../img/food.jpg'
 ];
 
-const imageContainer = document.getElementById('image-container');
+const recomendados = document.getElementById('recomendados');
+
 
 imageArray.forEach(imageUrl => {
+    
     const a = document.createElement('a');
     const card = document.createElement('div');
     const card_head = document.createElement('div');
@@ -23,6 +25,7 @@ imageArray.forEach(imageUrl => {
     img.style.height = '100px';
 
 
+    
     card.style = 'max-width: 150px;';
     
     card_head.textContent = 'Pedigree';
@@ -30,5 +33,5 @@ imageArray.forEach(imageUrl => {
     card_body.appendChild(a);
     card.appendChild(card_head);
     card.appendChild(card_body);
-    imageContainer.appendChild(card);
+    recomendados.appendChild(card);
 });
