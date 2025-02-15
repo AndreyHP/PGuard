@@ -1,7 +1,7 @@
 const imageArray = [
-    '../img/food.jpg',
-    '../img/food.jpg',
-    '../img/food.jpg'
+    '../img/food.png',
+    '../img/food.png',
+    '../img/food.png'
 ];
 
 const recomendados = document.getElementById('recomendados');
