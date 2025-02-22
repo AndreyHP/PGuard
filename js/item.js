@@ -1,8 +1,8 @@
-const file_path = "../api/items.json";
 const storeContainer = document.getElementById('main-store');
 const imageContainer = document.getElementById('item-container');
 const itname = sessionStorage.getItem("itemname");
 const itemimg = sessionStorage.getItem("itemimage");
+const file_path = sessionStorage.getItem("itempath");
 
 async function loadPetFoods(jsonPath) {
     try {

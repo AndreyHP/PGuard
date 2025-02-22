@@ -1,9 +1,19 @@
-const file_path = "../api/items.json";
+const file_path = "../api/dog.json";
 const imageContainer = document.getElementById('image-container');
 let itemname;
 let itemimg;
+let itempath;
 
+function filter(event){
 
+  event.preventDefault();
+
+  // Create a FormData object from the form
+  const formData = new FormData(event.target);
+
+  const file = formData.get('gender');
+  file_path = file;
+}
 
 async function loadPetFoods(jsonPath) {
     try {
@@ -64,6 +74,8 @@ async function loadPetFoods(jsonPath) {
         a.addEventListener("click", function() {
             itemname =`${brand.name}`; 
             itemimg = `${brand.image}`;
+            itempath = file_path;
+            sessionStorage.setItem("itempath", itempath);
             sessionStorage.setItem("itemname", itemname);
             sessionStorage.setItem("itemimage", itemimg);     
           });
