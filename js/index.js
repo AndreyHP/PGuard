@@ -1,18 +1,30 @@
-const file_path = "../api/dog.json";
+let file_path = "../api/dog.json";
+let data;
 const imageContainer = document.getElementById('image-container');
 let itemname;
 let itemimg;
 let itempath;
 
-function filter(event){
+function deleteDiv(){
+
+  var divs = document.querySelectorAll(".card");
+  divs.forEach(function(div) {
+      div.remove();
+  });
+  displayPetFoods();
+}
+
+async function filter(event){
 
   event.preventDefault();
 
   // Create a FormData object from the form
   const formData = new FormData(event.target);
 
-  const file = formData.get('gender');
+  const file = formData.get('pet_name');
   file_path = file;
+  console.log(file_path);
+  deleteDiv();
 }
 
 async function loadPetFoods(jsonPath) {
@@ -32,7 +44,7 @@ async function loadPetFoods(jsonPath) {
   // Function to display the pet food data in the console
   async function displayPetFoods() {
     try {
-      const data = await loadPetFoods(file_path);
+      data = await loadPetFoods(file_path);
       const petFoods = data.petFoods;
      
       
@@ -53,6 +65,7 @@ async function loadPetFoods(jsonPath) {
         img.src = `${brand.image}`; 
         a.href = 'item.html';
         card.className = 'card';
+        card.id = 'card';
         card_head.className = 'card-head';
         card_body.className = 'card-body';
         img.alt = `${brand.image}`;
@@ -96,7 +109,7 @@ async function loadPetFoods(jsonPath) {
   // Trigger the display of pet foods when the script loads
   
   displayPetFoods();
-
+  
 
 
 
